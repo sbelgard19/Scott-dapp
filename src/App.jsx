@@ -5,6 +5,9 @@ import MyDoubleButton from "./components/MyDoubleButton.jsx";
 
 import walletConnectFcn from "./components/hedera/walletConnect.js";
 import tokenCreateFcn from "./components/hedera/tokenCreate.js";
+
+import NFTtokenCreateFcn from "./components/hedera/NFTtokenCreate.js;
+
 import tokenMintFcn from "./components/hedera/tokenMint.js";
 import contractDeployFcn from "./components/hedera/contractDeploy.js";
 import contractExecuteFcn from "./components/hedera/contractExecute.js";
@@ -62,6 +65,26 @@ const [barTextSt, setbarTextSt] = useState("bar");
 			setCreateTextSt();
 		}
 	}
+
+/* NEW  NEW  NEW  NEW  */
+	async function NFTtokenCreate() {
+		if (tokenId !== undefined) {
+			setCreateTextSt(`You already have token ${tokenId} ✅`);
+		} else if (accountId === undefined) {
+			setCreateTextSt(`🛑 Connect a wallet first! 🛑`);
+		} else {
+			const [tId, supply, txIdRaw] = await NFTtokenCreateFcn(walletData, accountId);
+			setTokenId(tId);
+			setTokenSupply(supply);
+			setCreateTextSt(`Successfully created token with ID: ${tId} ✅`);
+			setMintTextSt();
+			setContractTextSt();
+			setTransferTextSt();
+			const txId = prettify(txIdRaw);
+			setCreateLinkSt(`https://hashscan.io/#/testnet/transaction/${txId}`);
+		}
+	}
+/* NEW  NEW  NEW  NEW  */
 
 	async function tokenCreate() {
 		if (tokenId !== undefined) {
@@ -205,8 +228,8 @@ const [barTextSt, setbarTextSt] = useState("bar");
     Right align content
 
 			<MyGroup
-				fcn={TBD_Execute}
-				buttonLabel={"TBD"}
+				fcn={NFTtokenCreate}
+				buttonLabel={"NFT"}
 				text={TBDTextSt}
 				link={TBDLinkSt}
 			/>
