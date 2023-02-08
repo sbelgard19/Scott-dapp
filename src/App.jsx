@@ -4,8 +4,8 @@ import MyGroup from "./components/MyGroup.jsx";
 import MyDoubleButton from "./components/MyDoubleButton.jsx";
 
 import walletConnectFcn from "./components/hedera/walletConnect.js";
-import tokenCreateFcn from "./components/hedera/tokenCreate.js";
 
+import tokenCreateFcn from "./components/hedera/tokenCreate.js";
 import NFTtokenCreateFcn from "./components/hedera/NFTtokenCreate.js";
 
 import tokenMintFcn from "./components/hedera/tokenMint.js";
@@ -36,14 +36,14 @@ function App() {
 	const [contractTextSt, setContractTextSt] = useState();
 	const [trasnferTextSt, setTransferTextSt] = useState();
 	
-		const [TBDTextSt, setTBDTextSt] = useState();
+		const [NFTTextSt, setNFTTextSt] = useState();
 
 	const [connectLinkSt, setConnectLinkSt] = useState("");
 	const [createLinkSt, setCreateLinkSt] = useState("");
 	const [mintLinkSt, setMintLinkSt] = useState("");
 	const [contractLinkSt, setContractLinkSt] = useState();
 	const [trasnferLinkSt, setTransferLinkSt] = useState();
-	const [TBDLinkSt, setTBDLinkSt] = useState(); 
+	const [NFTLinkSt, setTBDLinkSt] = useState(); 
 	
 const [fooTextSt, setfooTextSt] = useState("foo");
 const [barTextSt, setbarTextSt] = useState("bar");
@@ -230,8 +230,8 @@ const [barTextSt, setbarTextSt] = useState("bar");
 			<MyGroup
 				fcn={NFTtokenCreate}
 				buttonLabel={"NFT"}
-				text={TBDTextSt}
-				link={TBDLinkSt}
+				text={NFTTextSt}
+				link={NFTLinkSt}
 			/>
 </p>
 <p align="left">
