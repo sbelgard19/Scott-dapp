@@ -1,4 +1,4 @@
-# Hedera dApp Days
+# SCOTT-dApp
 
 # Pre-requisites:
 
