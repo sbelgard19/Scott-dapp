@@ -24,7 +24,7 @@ function App() {
 	const [walletData, setWalletData] = useState();
 	const [accountId, setAccountId] = useState();
 	const [tokenId, setTokenId] = useState();
-	const [tokenSupply, setTokenSupply] = useState();
+/* 	const [tokenSupply, setTokenSupply] = useState(); */
 	const [contractId, setContractId] = useState();
 
 	const [connectTextSt, setConnectTextSt] = useState("🔌 Connect here...");
@@ -41,7 +41,7 @@ function App() {
 	const [contractLinkSt, setContractLinkSt] = useState();
 	const [trasnferLinkSt, setTransferLinkSt] = useState();
 	
-		const [TBDLinkSt, setTBDLinkSt] = useState();
+/*		const [TBDLinkSt, setTBDLinkSt] = useState(); */
 	
 const [fooTextSt, setfooTextSt] = useState("foo");
 const [barTextSt, setbarTextSt] = useState("bar");
@@ -124,7 +124,7 @@ const [barTextSt, setbarTextSt] = useState("bar");
 		if (tokenId === undefined || contractId === undefined) {
 			setTBDTextSt("🛑 TBD not found 🛑");
 		} else {
-			const txTBD_Raw = await TBD_ExecuteFcn();
+/*			const txTBD_Raw = await TBD_ExecuteFcn(); */
 			setTBDTextSt(`🎉🎉🎉 Great job! You did the TBD 🎉🎉🎉`);
 		}
 	}
