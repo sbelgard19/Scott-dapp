@@ -225,9 +225,9 @@ const [barTextSt, setbarTextSt] = useState("bar");
 				text2={barTextSt}
 			/>
 CENTER
-
-		</div>
 				<span>Hedera-XOXOXO</span>
+		</div>
+
 	);
 }
 export default App;
