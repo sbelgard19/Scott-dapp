@@ -6,7 +6,7 @@ import MyDoubleButton from "./components/MyDoubleButton.jsx";
 import walletConnectFcn from "./components/hedera/walletConnect.js";
 import tokenCreateFcn from "./components/hedera/tokenCreate.js";
 
-import NFTtokenCreateFcn from "./components/hedera/NFTtokenCreate.js;
+import NFTtokenCreateFcn from "./components/hedera/NFTtokenCreate.js";
 
 import tokenMintFcn from "./components/hedera/tokenMint.js";
 import contractDeployFcn from "./components/hedera/contractDeploy.js";
