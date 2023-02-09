@@ -43,7 +43,8 @@ function App() {
 	const [mintLinkSt, setMintLinkSt] = useState("");
 	const [contractLinkSt, setContractLinkSt] = useState();
 	const [trasnferLinkSt, setTransferLinkSt] = useState();
-	const [NFTLinkSt, setTBDLinkSt] = useState(); 
+
+		const [NFTLinkSt, setTBDLinkSt] = useState(); 
 	
 const [fooTextSt, setfooTextSt] = useState("foo");
 const [barTextSt, setbarTextSt] = useState("bar");
@@ -77,9 +78,11 @@ const [barTextSt, setbarTextSt] = useState("bar");
 			setTokenId(tId);
 			setTokenSupply(supply);
 			setCreateTextSt(`Successfully created token with ID: ${tId} ✅`);
+
 			setMintTextSt();
 			setContractTextSt();
 			setTransferTextSt();
+
 			const txId = prettify(txIdRaw);
 			setCreateLinkSt(`https://hashscan.io/#/testnet/transaction/${txId}`);
 		}
@@ -182,8 +185,8 @@ const [barTextSt, setbarTextSt] = useState("bar");
 				text={connectTextSt}
 				link={connectLinkSt}
 			/>
-<p align="right">
-    Right align content
+<p align="center">
+
 
 			<MyGroup
 				fcn={tokenCreate}
@@ -192,9 +195,7 @@ const [barTextSt, setbarTextSt] = useState("bar");
 				link={createLinkSt}
 			/>
 </p>
-<p align="left">
-    Left align content
-
+<p align="center">
 
 			<MyGroup
 				fcn={tokenMint}
@@ -203,9 +204,7 @@ const [barTextSt, setbarTextSt] = useState("bar");
 				link={mintLinkSt}
 			/>
 </p>
-<p align="right">
-    Right align content
-
+<p align="center">
 
 			<MyGroup
 				fcn={contractDeploy}
@@ -214,8 +213,7 @@ const [barTextSt, setbarTextSt] = useState("bar");
 				link={contractLinkSt}
 			/>
 </p>
-<p align="left">
-    Left align content
+<p align="center">
 
 			<MyGroup
 				fcn={contractExecute}
@@ -224,8 +222,7 @@ const [barTextSt, setbarTextSt] = useState("bar");
 				link={trasnferLinkSt}
 			/>
 </p>
-<p align="right">
-    Right align content
+<p align="center">
 
 			<MyGroup
 				fcn={NFTtokenCreate}
@@ -234,8 +231,7 @@ const [barTextSt, setbarTextSt] = useState("bar");
 				link={NFTLinkSt}
 			/>
 </p>
-<p align="left">
-    Left align content
+<p align="center">
 </p>				
 			<MyDoubleButton
 				fcn1={Clear_Messages}
@@ -247,7 +243,6 @@ const [barTextSt, setbarTextSt] = useState("bar");
 				text1={fooTextSt}
 				text2={barTextSt}
 			/>
-CENTER
 				<span>Hedera-XOXOXO</span>
 		</div>
 
