@@ -23,10 +23,11 @@ async function NFTtokenCreateFcn(walletData, accountId) {
 		.setAutoRenewAccountId(accountId)
 		.setAutoRenewPeriod(7776000)
 
+		.setTokenType(TokenType.NonFungibleUnique)
+
 		.setInitialSupply(0)
 		.setDecimals(0)
 
-		.setSupplyType(TokenSupplyType.Finite)
 		.setMaxSupply(10)
 
 		.setSupplyKey(supplyKey)
