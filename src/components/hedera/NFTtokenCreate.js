@@ -20,15 +20,14 @@ async function NFTtokenCreateFcn(walletData, accountId) {
 		.setTokenName("Scott dApp NFT Created Token")
 		.setTokenSymbol("SdApp-1")
 		.setTreasuryAccountId(accountId)
-		.setAutoRenewAccountId(accountId)
-		.setAutoRenewPeriod(7776000)
 
 		.setTokenType(TokenType.NonFungibleUnique)
+		.setSupplyType(TokenSupplyType.Finite)
 
 		.setInitialSupply(0)
 		.setDecimals(0)
 
-		.setMaxSupply(10)
+//		.setMaxSupply(10)
 
 		.setSupplyKey(supplyKey)
 		.setAdminKey(adminKey)
