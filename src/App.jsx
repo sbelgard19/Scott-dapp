@@ -74,6 +74,7 @@ const [barTextSt, setbarTextSt] = useState("bar");
 		} else if (accountId === undefined) {
 			setNFTTextSt(`🛑 (NFT) Connect a wallet first! 🛑`);  
 		} else {
+			setNFTTextSt(`🖐️ awaiting  NFTtokenCreateFcn... 🖐️`);  
 			const [tId, supply, txIdRaw] = await NFTtokenCreateFcn(walletData, accountId);
 			setTokenId(tId);
 			setTokenSupply(supply);
@@ -176,7 +177,7 @@ const [barTextSt, setbarTextSt] = useState("bar");
 
 	return (
 		<div className="App">
-			<h3 className="header">Let's BUILD SCOTTs dapp on Hedera!</h3>
+			<h1>Let's BUILD SCOTTs dapp on Hedera!</h1>
 			<MyGroup
 				fcn={connectWallet}
 				buttonLabel={"Connect Wallet"}
