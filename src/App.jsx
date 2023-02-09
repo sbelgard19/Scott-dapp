@@ -178,7 +178,7 @@ const [barTextSt, setbarTextSt] = useState("bar");
 
 	return (
 		<div className="App">
-			<h2 className="header">HEY THERE - Let's BUILD a dapp on Hedera!</h2>
+			<h3 className="header">Let's BUILD SCOTTs dapp on Hedera!</h3>
 			<MyGroup
 				fcn={connectWallet}
 				buttonLabel={"Connect Wallet"}
