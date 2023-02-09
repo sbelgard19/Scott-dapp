@@ -156,12 +156,14 @@ const [barTextSt, setbarTextSt] = useState("bar");
 	
 	async function Clear_Messages() {
 			setTBDTextSt("");
-			setTransferTextSt();
-			setContractTextSt();
-			setMintTextSt();
-			setCreateTextSt();
-			setfooTextSt();
-			setbarTextSt();
+			setTransferTextSt("");
+			setContractTextSt("");
+			setMintTextSt("");
+			setCreateTextSt("");
+			setCreateTextSt("");
+			setNFTTextSt("");
+			setfooTextSt("");
+			setbarTextSt("");
 	}
 	
 	async function Do_Nothing() {
