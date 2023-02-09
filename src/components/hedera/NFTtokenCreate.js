@@ -18,7 +18,6 @@ async function NFTtokenCreateFcn(walletData, accountId) {
 	const adminKey = PublicKey.fromString(mirrorQuery.data.accounts[0].key.key);
 
 
-
 	const tokenCreateTx = await new TokenCreateTransaction()
 		.setTokenName("Scott dApp NFT Created Token")
 		.setTokenSymbol("SdApp-1")
@@ -26,6 +25,9 @@ async function NFTtokenCreateFcn(walletData, accountId) {
 
 		.setTokenType(TokenType.NonFungibleUnique)
 		.setSupplyType(TokenSupplyType.Finite)
+
+		.setAutoRenewAccountId(accountId)
+		.setAutoRenewPeriod(7776000)
 
 		.setInitialSupply(0)
 		.setDecimals(0)
