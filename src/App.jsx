@@ -44,7 +44,7 @@ function App() {
 	const [contractLinkSt, setContractLinkSt] = useState();
 	const [trasnferLinkSt, setTransferLinkSt] = useState();
 
-		const [NFTLinkSt, setTBDLinkSt] = useState(); 
+		const [NFTLinkSt, setNFTLinkSt] = useState(); 
 	
 const [fooTextSt, setfooTextSt] = useState("foo");
 const [barTextSt, setbarTextSt] = useState("bar");
@@ -70,21 +70,21 @@ const [barTextSt, setbarTextSt] = useState("bar");
 /* NEW  NEW  NEW  NEW  */
 	async function NFTtokenCreate() {
 		if (tokenId !== undefined) {
-			setCreateTextSt(`You already have token ${tokenId} ✅`);
+			setNFTTextSt(`You already have token ${tokenId} ✅`);
 		} else if (accountId === undefined) {
-			setCreateTextSt(`🛑 Connect a wallet first! 🛑`);
+			setNFTTextSt(`🛑 Connect a wallet first! 🛑`);  
 		} else {
 			const [tId, supply, txIdRaw] = await NFTtokenCreateFcn(walletData, accountId);
 			setTokenId(tId);
 			setTokenSupply(supply);
-			setCreateTextSt(`Successfully created token with ID: ${tId} ✅`);
+			setNFTTextSt(`Successfully created token with ID: ${tId} ✅`);
 
 			setMintTextSt();
 			setContractTextSt();
 			setTransferTextSt();
 
 			const txId = prettify(txIdRaw);
-			setCreateLinkSt(`https://hashscan.io/#/testnet/transaction/${txId}`);
+			setNFTTextSt(`https://hashscan.io/#/testnet/transaction/${txId}`);
 		}
 	}
 /* NEW  NEW  NEW  NEW  */
