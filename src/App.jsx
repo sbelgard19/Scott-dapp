@@ -26,6 +26,7 @@ function App() {
 	const [walletData, setWalletData] = useState();
 	const [accountId, setAccountId] = useState();
 	const [tokenId, setTokenId] = useState();
+	const [NFTtokenId, setNFTTokenId] = useState();
  	const [tokenSupply, setTokenSupply] = useState(); 
 	const [contractId, setContractId] = useState();
 
@@ -68,16 +69,16 @@ const [barTextSt, setbarTextSt] = useState("bar");
 
 /* NEW  NEW  NEW  NEW  */
 	async function NFTtokenCreate() {
-		if (tokenId !== undefined) {
-			setNFTTextSt(`You already have token ${tokenId} ✅`);
+		if (NFTtokenId !== undefined) {
+			setNFTTextSt(`You already have token ${NFTtokenId} ✅`);
 		} else if (accountId === undefined) {
 			setNFTTextSt(`🛑 (NFT) Connect a wallet first! 🛑`);  
 		} else {
 			setNFTTextSt(`🖐️ awaiting  NFTtokenCreateFcn... 🖐️`);  
 			const [tId, supply, txIdRaw] = await NFTtokenCreateFcn(walletData, accountId);
-			setTokenId(tId);
+			setNFTTokenId(tId);
 			setTokenSupply(supply);
-			setNFTTextSt(`Successfully created token with ID: ${tId} ✅`);
+			setNFTTextSt(`✅✅Successfully created token with ID: ${tId} ✅✅`);
 
 			setMintTextSt();
 			setContractTextSt();
