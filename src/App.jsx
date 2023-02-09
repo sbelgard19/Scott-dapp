@@ -84,8 +84,8 @@ const [barTextSt, setbarTextSt] = useState("bar");
 			setContractTextSt();
 			setTransferTextSt();
 
-			const txId = prettify(txIdRaw);
-			setNFTTextSt(`https://hashscan.io/#/testnet/transaction/${txId}`);
+/* 			const txId = prettify(txIdRaw); */
+/* 			setNFTTextSt(`https://hashscan.io/#/testnet/transaction/${txId}`); */
 		}
 	}
 /* NEW  NEW  NEW  NEW  */
