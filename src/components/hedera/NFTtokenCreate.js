@@ -1,5 +1,6 @@
 import axios from "axios";
 import { TokenCreateTransaction, PublicKey } from "@hashgraph/sdk";
+import { TokenSupplyType, TokenType } from "@hashgraph/sdk";
 
 async function NFTtokenCreateFcn(walletData, accountId) {
 	console.log(`\n=======================================`);
@@ -16,7 +17,7 @@ async function NFTtokenCreateFcn(walletData, accountId) {
 	const supplyKey = PublicKey.fromString(mirrorQuery.data.accounts[0].key.key);
 	const adminKey = PublicKey.fromString(mirrorQuery.data.accounts[0].key.key);
 
-const { TokenSupplyType, TokenType } = require "(@hashgraph/sdk");
+
 
 	const tokenCreateTx = await new TokenCreateTransaction()
 		.setTokenName("Scott dApp NFT Created Token")
