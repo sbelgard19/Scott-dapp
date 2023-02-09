@@ -72,7 +72,7 @@ const [barTextSt, setbarTextSt] = useState("bar");
 		if (tokenId !== undefined) {
 			setNFTTextSt(`You already have token ${tokenId} ✅`);
 		} else if (accountId === undefined) {
-			setNFTTextSt(`🛑 Connect a wallet first! 🛑`);  
+			setNFTTextSt(`🛑 (NFT) Connect a wallet first! 🛑`);  
 		} else {
 			const [tId, supply, txIdRaw] = await NFTtokenCreateFcn(walletData, accountId);
 			setTokenId(tId);
@@ -93,7 +93,7 @@ const [barTextSt, setbarTextSt] = useState("bar");
 		if (tokenId !== undefined) {
 			setCreateTextSt(`You already have token ${tokenId} ✅`);
 		} else if (accountId === undefined) {
-			setCreateTextSt(`🛑 Connect a wallet first! 🛑`);
+			setCreateTextSt(`🛑 (FT)) Connect a wallet first! 🛑`);
 		} else {
 			const [tId, supply, txIdRaw] = await tokenCreateFcn(walletData, accountId);
 			setTokenId(tId);
@@ -109,7 +109,7 @@ const [barTextSt, setbarTextSt] = useState("bar");
 
 	async function tokenMint() {
 		if (tokenId === undefined) {
-			setMintTextSt("🛑 Create a token first! 🛑");
+			setMintTextSt("🛑 (MINT) Create a token first! 🛑");
 		} else {
 			const [supply, txIdRaw] = await tokenMintFcn(walletData, accountId, tokenId);
 			setTokenSupply(supply);
@@ -121,7 +121,7 @@ const [barTextSt, setbarTextSt] = useState("bar");
 
 	async function contractDeploy() {
 		if (tokenId === undefined) {
-			setContractTextSt("🛑 Create a token first! 🛑");
+			setContractTextSt("🛑 (DEPLOY) Create a token first! 🛑");
 		} else if (contractId !== undefined) {
 			setContractTextSt(`You already have contract ${contractId} ✅`);
 		} else {
@@ -136,7 +136,7 @@ const [barTextSt, setbarTextSt] = useState("bar");
 
 	async function contractExecute() {
 		if (tokenId === undefined || contractId === undefined) {
-			setTransferTextSt("🛑 Create a token AND deploy a contract first! 🛑");
+			setTransferTextSt("🛑 (EXECUTE) Create a token AND deploy a contract first! 🛑");
 		} else {
 			const txIdRaw = await contractExecuteFcn(walletData, accountId, tokenId, contractId);
 			setTransferTextSt(`🎉🎉🎉 Great job! You completed the demo 🎉🎉🎉`);
@@ -159,10 +159,7 @@ const [barTextSt, setbarTextSt] = useState("bar");
 			setContractTextSt();
 			setMintTextSt();
 			setCreateTextSt();
-			setCreateTextSt();
 			setNFTTextSt();
-			setfooTextSt();
-			setbarTextSt();
 	}
 	
 	async function Do_Nothing() {
@@ -231,8 +228,6 @@ const [barTextSt, setbarTextSt] = useState("bar");
 			<MyGroup
 				fcn={Clear_Messages}
 				buttonLabel={"Clear Messages"}
-				text={NFTTextSt}
-				link={NFTLinkSt}
 			/>
 </p>
 			
