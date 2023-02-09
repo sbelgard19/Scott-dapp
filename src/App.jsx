@@ -155,15 +155,14 @@ const [barTextSt, setbarTextSt] = useState("bar");
 	}
 	
 	async function Clear_Messages() {
-			setTBDTextSt("");
-			setTransferTextSt("");
-			setContractTextSt("");
-			setMintTextSt("");
-			setCreateTextSt("");
-			setCreateTextSt("");
-			setNFTTextSt("");
-			setfooTextSt("");
-			setbarTextSt("");
+			setTransferTextSt();
+			setContractTextSt();
+			setMintTextSt();
+			setCreateTextSt();
+			setCreateTextSt();
+			setNFTTextSt();
+			setfooTextSt();
+			setbarTextSt();
 	}
 	
 	async function Do_Nothing() {
@@ -188,8 +187,6 @@ const [barTextSt, setbarTextSt] = useState("bar");
 				link={connectLinkSt}
 			/>
 <p align="center">
-
-
 			<MyGroup
 				fcn={tokenCreate}
 				buttonLabel={"Create New Token"}
@@ -207,7 +204,6 @@ const [barTextSt, setbarTextSt] = useState("bar");
 			/>
 </p>
 <p align="center">
-
 			<MyGroup
 				fcn={contractDeploy}
 				buttonLabel={"Deploy Contract"}
@@ -216,7 +212,6 @@ const [barTextSt, setbarTextSt] = useState("bar");
 			/>
 </p>
 <p align="center">
-
 			<MyGroup
 				fcn={contractExecute}
 				buttonLabel={"Transfer Tokens"}
@@ -225,7 +220,6 @@ const [barTextSt, setbarTextSt] = useState("bar");
 			/>
 </p>
 <p align="center">
-
 			<MyGroup
 				fcn={NFTtokenCreate}
 				buttonLabel={"NFT"}
@@ -234,17 +228,14 @@ const [barTextSt, setbarTextSt] = useState("bar");
 			/>
 </p>
 <p align="center">
-</p>				
-			<MyDoubleButton
-				fcn1={Clear_Messages}
-				buttonLabel1={"Clear Messages"}
-
-				fcn2={Do_Nothing}
-				buttonLabel2={"What?"}
-
-				text1={fooTextSt}
-				text2={barTextSt}
+			<MyGroup
+				fcn={Clear_Messages}
+				buttonLabel={"Clear Messages"}
+				text={NFTTextSt}
+				link={NFTLinkSt}
 			/>
+</p>
+			
 				<span>Hedera-XOXOXO</span>
 		</div>
 
