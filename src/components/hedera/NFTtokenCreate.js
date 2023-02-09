@@ -27,7 +27,7 @@ async function NFTtokenCreateFcn(walletData, accountId) {
 		.setInitialSupply(0)
 		.setDecimals(0)
 
-//		.setMaxSupply(10)
+		.setMaxSupply(10)
 
 		.setSupplyKey(supplyKey)
 		.setAdminKey(adminKey)
