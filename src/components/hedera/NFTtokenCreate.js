@@ -16,6 +16,8 @@ async function NFTtokenCreateFcn(walletData, accountId) {
 	const supplyKey = PublicKey.fromString(mirrorQuery.data.accounts[0].key.key);
 	const adminKey = PublicKey.fromString(mirrorQuery.data.accounts[0].key.key);
 
+const { TokenSupplyType, TokenType } = require "(@hashgraph/sdk");
+
 	const tokenCreateTx = await new TokenCreateTransaction()
 		.setTokenName("Scott dApp NFT Created Token")
 		.setTokenSymbol("SdApp-1")
