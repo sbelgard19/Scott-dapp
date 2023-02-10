@@ -120,8 +120,7 @@ function App() {
 	}
 
 	async function setupTokenID() {
-		setTokenId=useState("🍬🍬🍬🍬🍬");
-		setSetupTextSt(${tokenId});
+		setTokenId=useState("0.0.12345");
 	}
 
 	async function contractDeploy() {
