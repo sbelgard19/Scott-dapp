@@ -7,6 +7,8 @@ function MyFormGroup(props) {
 		<div class="div-1">
 			<MyText text={props.text} link={props.link} />
 			<MyFormButton fcn={props.fcn} buttonLabel={props.buttonLabel} />
+			ddd
+			vvv
 		</div>
 	);
 }
