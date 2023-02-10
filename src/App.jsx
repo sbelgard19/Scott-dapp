@@ -46,6 +46,7 @@ function App() {
 	const [trasnferLinkSt, setTransferLinkSt] = useState();
 
 		const [NFTLinkSt, setNFTLinkSt] = useState(); 
+		const [tokenIDLinkSt, setTokenIDLinkSt] = useState();
 	
 	async function connectWallet() {
 		if (accountId !== undefined) {
@@ -120,7 +121,6 @@ function App() {
 	}
 
 	async function setupTokenID() {
-		setTokenIDTextSt("🛑 foo 🛑");
 		}
 
 	async function contractDeploy() {
@@ -155,6 +155,7 @@ function App() {
 			setMintTextSt();
 			setCreateTextSt();
 			setNFTTextSt();
+			setTokenIDTextSt();
 	}
 	
 		function prettify(txIdRaw) {
