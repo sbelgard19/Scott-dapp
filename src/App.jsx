@@ -121,7 +121,7 @@ function App() {
 	}
 
 	async function setupTokenID() {
-		setTokenId(`foo-you`);
+		setTokenId("🛑0.0.1234567🛑");
 		setTokenIDTextSt(`${tokenId}`);
 		}
 
