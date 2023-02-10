@@ -121,6 +121,7 @@ function App() {
 	}
 
 	async function setupTokenID() {
+		setTokenIDTextSt("foo");
 		}
 
 	async function contractDeploy() {
@@ -155,7 +156,7 @@ function App() {
 			setMintTextSt();
 			setCreateTextSt();
 			setNFTTextSt();
-			setTokenIDTextSt("foo");
+			setTokenIDTextSt();
 	}
 	
 		function prettify(txIdRaw) {
