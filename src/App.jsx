@@ -218,7 +218,7 @@ const [barTextSt, setbarTextSt] = useState("bar");
 			/>
 </p>
 <p align="center">
-			<MyGroup
+			<MyFormGroup
 				fcn={NFTtokenCreate}
 				buttonLabel={"NFT"}
 				text={NFTTextSt}
