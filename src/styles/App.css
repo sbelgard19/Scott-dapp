@@ -354,7 +354,7 @@ code {
 }
 .div-1 {
 	border-color: #202020;
-	border-width: thin;
+	border-width: 10px;
 	background-color: coral;
 	width: fit-content;
 }
