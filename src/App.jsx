@@ -37,7 +37,7 @@ function App() {
 	const [trasnferTextSt, setTransferTextSt] = useState();
 	
 		const [NFTTextSt, setNFTTextSt] = useState();
-		const [setupTextSt, setsetupTextSt] = useState();
+		const [setupTextSt, setsetupTextSt] = useState("🍬🍬🍬🍬🍬");
 
 	const [connectLinkSt, setConnectLinkSt] = useState("");
 	const [createLinkSt, setCreateLinkSt] = useState("");
@@ -120,8 +120,8 @@ function App() {
 	}
 
 	async function setupTokenID() {
-		setTokenId('0.0.1234567'); 
-		setsetupTextSt('foo:'${tokenId});
+	/*	tokenId = `0.0.1234567`; */
+		setsetupTextSt(${tokenId});
 	}
 
 	async function contractDeploy() {
