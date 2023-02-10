@@ -4,8 +4,10 @@ function MyFormButton(props) {
 	return (
 		<div>
 			<form>
-				<label for="fname">Token Name</label>
-				<input type="text" id="fname" name="fname"></input>
+				<label>Token Name</label>
+				<input size="100px" type="text" id="fname1" name="fname1"></input>
+				<label >Token Symbol</label>
+				<input size="20px" type="text" id="fname2" name="fname2"></input>
 			</form>
 			<button onClick={props.fcn} className="cta-button">
 				{props.buttonLabel}
