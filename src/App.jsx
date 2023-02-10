@@ -72,12 +72,11 @@ const [barTextSt, setbarTextSt] = useState("bar");
 		if (NFTtokenId !== undefined) {
 			setNFTTextSt(`You already have token ${NFTtokenId} ✅`);
 		} else if (accountId === undefined) {
-			setNFTTextSt(`🛑 (NFT) Connect a wallet first! 🛑`);  
+			setNFTTextSt(`🛑 Connect a wallet first! 🛑`);  
 		} else {
 			setNFTTextSt(`🖐️ awaiting  NFTtokenCreateFcn... 🖐️`);  
 			const [tId, supply, txIdRaw] = await NFTtokenCreateFcn(walletData, accountId);
 			setNFTTokenId(tId);
-			setTokenSupply(supply);
 			setNFTTextSt(`✅✅Successfully created token with ID: ${tId} ✅✅`);
 
 			setMintTextSt();
@@ -94,15 +93,17 @@ const [barTextSt, setbarTextSt] = useState("bar");
 		if (tokenId !== undefined) {
 			setCreateTextSt(`You already have token ${tokenId} ✅`);
 		} else if (accountId === undefined) {
-			setCreateTextSt(`🛑 (FT)) Connect a wallet first! 🛑`);
+			setCreateTextSt(`🛑 Connect a wallet first! 🛑`);
 		} else {
 			const [tId, supply, txIdRaw] = await tokenCreateFcn(walletData, accountId);
 			setTokenId(tId);
 			setTokenSupply(supply);
 			setCreateTextSt(`Successfully created token with ID: ${tId} ✅`);
+
 			setMintTextSt();
 			setContractTextSt();
 			setTransferTextSt();
+
 			const txId = prettify(txIdRaw);
 			setCreateLinkSt(`https://hashscan.io/#/testnet/transaction/${txId}`);
 		}
@@ -110,19 +111,23 @@ const [barTextSt, setbarTextSt] = useState("bar");
 
 	async function tokenMint() {
 		if (tokenId === undefined) {
-			setMintTextSt("🛑 (MINT) Create a token first! 🛑");
+			setMintTextSt("🛑 Create a token first! 🛑");
 		} else {
 			const [supply, txIdRaw] = await tokenMintFcn(walletData, accountId, tokenId);
 			setTokenSupply(supply);
-			setMintTextSt(`Supply of token ${tokenId} is ${supply}! ✅`);
+			setMintTextSt(`Supply of token ${tokenId} is now ${supply}! ✅`);
 			const txId = prettify(txIdRaw);
 			setMintLinkSt(`https://hashscan.io/#/testnet/transaction/${txId}`);
 		}
 	}
 
+	async function setupTokenID() {
+		setTokenId("0.0.3355048"); 
+	}
+
 	async function contractDeploy() {
 		if (tokenId === undefined) {
-			setContractTextSt("🛑 (DEPLOY) Create a token first! 🛑");
+			setContractTextSt("🛑 Create a token first! 🛑");
 		} else if (contractId !== undefined) {
 			setContractTextSt(`You already have contract ${contractId} ✅`);
 		} else {
@@ -137,7 +142,7 @@ const [barTextSt, setbarTextSt] = useState("bar");
 
 	async function contractExecute() {
 		if (tokenId === undefined || contractId === undefined) {
-			setTransferTextSt("🛑 (EXECUTE) Create a token AND deploy a contract first! 🛑");
+			setTransferTextSt("🛑 Create a token AND deploy a contract first! 🛑");
 		} else {
 			const txIdRaw = await contractExecuteFcn(walletData, accountId, tokenId, contractId);
 			setTransferTextSt(`🎉🎉🎉 Great job! You completed the demo 🎉🎉🎉`);
@@ -178,16 +183,24 @@ const [barTextSt, setbarTextSt] = useState("bar");
 <p align="center">
 			<MyGroup
 				fcn={tokenCreate}
-				buttonLabel={"Create New Token"}
+				buttonLabel={"Create New FT"}
 				text={createTextSt}
 				link={createLinkSt}
+			/>
+</p>
+<p align="center">
+			<MyGroup
+				fcn={setupTokenID}
+				buttonLabel={"Set Token ID"}
+				text={trasnferTextSt}
+				link={trasnferLinkSt}
 			/>
 </p>
 <p align="center">
 
 			<MyGroup
 				fcn={tokenMint}
-				buttonLabel={"Mint 100 New Tokens"}
+				buttonLabel={"Add Supply (100) to FT ID"}
 				text={mintTextSt}
 				link={mintLinkSt}
 			/>
@@ -211,7 +224,7 @@ const [barTextSt, setbarTextSt] = useState("bar");
 <p align="center">
 			<MyFormGroup
 				fcn={NFTtokenCreate}
-				buttonLabel={"NFT"}
+				buttonLabel={"Create New empty NFT"}
 				text={NFTTextSt}
 				link={NFTLinkSt}
 			/>

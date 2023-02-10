@@ -5,11 +5,11 @@ function MyFormButton(props) {
 		<div >
 			<form>
 				<label>Token Name:  </label>
-				<input size="25" type="text" id="fname1" name="TokenName"></input>
+				<input size="25" type="text" id="TNAM" name="TokenName"></input>
 				<label >   Token Symbol:  </label>
-				<input size="3" maxlength="3" type="text" id="fname2" name="TokenSymbol"></input>
+				<input size="3" maxlength="3" type="text" id="TSYM" name="TokenSymbol"></input>
 				<label >   Max Supply:  </label>
-				<input size="3" maxlength="3" type="text" id="fname2" name="MaxSupply"></input>
+				<input size="3" maxlength="3" type="text" id="TSUP" name="MaxSupply"></input>
 			</form>
 			<button onClick={props.fcn} className="cta-button">
 				{props.buttonLabel}
