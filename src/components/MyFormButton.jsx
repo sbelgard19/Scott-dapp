@@ -2,7 +2,7 @@ import React from "react";
 
 function MyFormButton(props) {
 	return (
-		<div style="border: 1px solid #000000;">
+		<div >
 			<form>
 				<label>Token Name:  </label>
 				<input size="25" type="text" id="fname1" name="TokenName"></input>
