@@ -146,15 +146,6 @@ const [barTextSt, setbarTextSt] = useState("bar");
 		}
 	}
 	
-	async function TBD_Execute() {
-		if (tokenId === undefined || contractId === undefined) {
-			setTBDTextSt("🛑 TBD not found 🛑");
-		} else {
-			const txTBD_Raw = await TBD_ExecuteFcn(); 
-			setTBDTextSt(`🎉🎉🎉 Great job! You did the TBD 🎉🎉🎉`);
-		}
-	}
-	
 	async function Clear_Messages() {
 			setTransferTextSt();
 			setContractTextSt();
