@@ -352,6 +352,10 @@ code {
 	font-weight: 300;
 	letter-spacing: -0.03em;
 }
+.div-1 {
+	border: #FF3396;
+	width: 1;
+}
 
 @media (max-width: 340px) {
 	.logo .symbol {
