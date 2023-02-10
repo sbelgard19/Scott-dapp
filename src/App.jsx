@@ -121,7 +121,8 @@ function App() {
 	}
 
 	async function setupTokenID() {
-		setTokenIDTextSt("foo");
+		setTokenId(`foo-you`);
+		setTokenIDTextSt(`${tokenId}`);
 		}
 
 	async function contractDeploy() {
