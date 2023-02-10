@@ -37,6 +37,7 @@ function App() {
 	const [trasnferTextSt, setTransferTextSt] = useState();
 	
 		const [NFTTextSt, setNFTTextSt] = useState();
+		const [setupTextSt, setsetupTextSt] = useState();
 
 	const [connectLinkSt, setConnectLinkSt] = useState("");
 	const [createLinkSt, setCreateLinkSt] = useState("");
@@ -46,9 +47,6 @@ function App() {
 
 		const [NFTLinkSt, setNFTLinkSt] = useState(); 
 	
-const [fooTextSt, setfooTextSt] = useState("foo");
-const [barTextSt, setbarTextSt] = useState("bar");
-
 	async function connectWallet() {
 		if (accountId !== undefined) {
 			setConnectTextSt(`🔌 Account ${accountId} already connected ⚡ ✅`);
@@ -122,7 +120,8 @@ const [barTextSt, setbarTextSt] = useState("bar");
 	}
 
 	async function setupTokenID() {
-		setTokenId("0.0.3355048"); 
+		setTokenId("0.0.1234567"); 
+		setsetupTextSt(setsetupTextSt);
 	}
 
 	async function contractDeploy() {
@@ -192,8 +191,8 @@ const [barTextSt, setbarTextSt] = useState("bar");
 			<MyGroup
 				fcn={setupTokenID}
 				buttonLabel={"Set Token ID"}
-				text={trasnferTextSt}
-				link={trasnferLinkSt}
+				text={setupTextSt}
+				link={setupLinkSt}
 			/>
 </p>
 <p align="center">
