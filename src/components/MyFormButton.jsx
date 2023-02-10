@@ -11,11 +11,9 @@ function MyFormButton(props) {
 				<label >   Max Supply:  </label>
 				<input size="3" maxlength="3" type="text" id="fname2" name="MaxSupply"></input>
 			</form>
-			<br></br>
 			<button onClick={props.fcn} className="cta-button">
 				{props.buttonLabel}
 			</button>
-			<br>x</br><br>y</br>
 		</div>
 	);
 }
