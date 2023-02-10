@@ -155,7 +155,7 @@ function App() {
 			setMintTextSt();
 			setCreateTextSt();
 			setNFTTextSt();
-			setTokenIDTextSt();
+			setTokenIDTextSt("foo");
 	}
 	
 		function prettify(txIdRaw) {
