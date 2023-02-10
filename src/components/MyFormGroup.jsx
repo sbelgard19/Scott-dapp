@@ -5,11 +5,10 @@ import MyText from "./MyText.jsx";
 function MyFormGroup(props) {
 	return (
 		<div class="div-1">
-			xxx
+			<br></br>
 			<MyText text={props.text} link={props.link} />
 			<MyFormButton fcn={props.fcn} buttonLabel={props.buttonLabel} />
-			ddd <br></br>
-			vvv
+			<br></br>
 		</div>
 	);
 }
