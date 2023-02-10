@@ -3,8 +3,6 @@ import React, { useState } from "react";
 import MyGroup from "./components/MyGroup.jsx";
 import MyFormGroup from "./components/MyFormGroup.jsx";
 
-import MyDoubleButton from "./components/MyDoubleButton.jsx";
-
 import walletConnectFcn from "./components/hedera/walletConnect.js";
 
 import tokenCreateFcn from "./components/hedera/tokenCreate.js";
