@@ -355,6 +355,7 @@ code {
 .div-1 {
 	border-color: #FF3396;
 	background-color: coral;
+	width: fit-content;
 }
 
 @media (max-width: 340px) {

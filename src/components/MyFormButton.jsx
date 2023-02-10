@@ -15,6 +15,7 @@ function MyFormButton(props) {
 			<button onClick={props.fcn} className="cta-button">
 				{props.buttonLabel}
 			</button>
+			<br></br>
 		</div>
 	);
 }
