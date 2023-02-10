@@ -37,7 +37,7 @@ function App() {
 	const [trasnferTextSt, setTransferTextSt] = useState();
 	
 		const [NFTTextSt, setNFTTextSt] = useState();
-		const [setupTextSt, setsetupTextSt] = useState("🍬🍬🍬🍬🍬");
+		const [SetupTextSt, setSetupTextSt] = useState("🍬🍬🍬🍬🍬");
 
 	const [connectLinkSt, setConnectLinkSt] = useState("");
 	const [createLinkSt, setCreateLinkSt] = useState("");
@@ -120,8 +120,8 @@ function App() {
 	}
 
 	async function setupTokenID() {
-	/*	tokenId = `0.0.1234567`; */
-		setsetupTextSt(${tokenId});
+		setTokenId=useState("🍬🍬🍬🍬🍬");
+		setSetupTextSt(${tokenId});
 	}
 
 	async function contractDeploy() {
@@ -191,8 +191,8 @@ function App() {
 			<MyGroup
 				fcn={setupTokenID}
 				buttonLabel={"Set Token ID"}
-				text={setupTextSt}
-				link={setupLinkSt}
+				text={SetupTextSt}
+				link={SetupLinkSt}
 			/>
 </p>
 <p align="center">
