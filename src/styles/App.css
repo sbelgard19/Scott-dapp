@@ -353,7 +353,8 @@ code {
 	letter-spacing: -0.03em;
 }
 .div-1 {
-	border-color: #FF3396;
+	border-color: #202020;
+	border-width: thin;
 	background-color: coral;
 	width: fit-content;
 }
