@@ -12,7 +12,7 @@ import tokenMintFcn from "./components/hedera/tokenMint.js";
 import contractDeployFcn from "./components/hedera/contractDeploy.js";
 import contractExecuteFcn from "./components/hedera/contractExecute.js";
 
- /* shortcut Ctrl + Shift + M  (problems)*/
+ /* shortcut Ctrl + Shift + M  (problems) 4:11*/
 
 import "./styles/App.css";
 
