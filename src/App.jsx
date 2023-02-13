@@ -12,6 +12,7 @@ import tokenMintFcn from "./components/hedera/tokenMint.js";
 import contractDeployFcn from "./components/hedera/contractDeploy.js";
 import contractExecuteFcn from "./components/hedera/contractExecute.js";
 
+ /* shortcut Ctrl + Shift + M  (problems)*/
 
 import "./styles/App.css";
 
@@ -48,6 +49,8 @@ function App() {
 		const [NFTLinkSt, setNFTLinkSt] = useState(); 
 		const [tokenIDLinkSt, setTokenIDLinkSt] = useState();
 	
+
+		
 	async function connectWallet() {
 		if (accountId !== undefined) {
 			setConnectTextSt(`🔌 Account ${accountId} already connected ⚡ ✅`);
